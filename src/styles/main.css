@@ -29,11 +29,11 @@ body {
     align-items: center;
     justify-content: space-between;
     margin: 0 auto;
-    padding: 0 1rem;
 }
 
 .header__inner {
     text-align: center;
+    margin-left: 1rem;
     /* margin-left: auto;
     margin-right: auto; */
 }
@@ -50,6 +50,7 @@ body {
     font-size: 32px;
     display: block;
     width: 30px;
+    margin-right: 1rem;
 }
 
 
@@ -102,7 +103,7 @@ body {
     min-height: 380px;
     width: 100%;
     text-align: center;
-    background-image: url("https://media-www.awalmula.co.id/mageplaza/bannerslider/banner/image/b/a/banner-sep-2021.jpg");
+    background-image: url("/images/heros/hero-image_4.jpg");
     background-position: center;
     background-color: green;
 }
