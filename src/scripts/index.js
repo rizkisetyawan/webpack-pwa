@@ -1,3 +1,4 @@
+import 'regenerator-runtime';
 import '../styles/main.css';
 import '../styles/responsive.css';
 import data from '../DATA.json';
@@ -7,22 +8,22 @@ const hero = document.querySelector('.hero');
 const main = document.querySelector('main');
 const drawer = document.querySelector('#drawer');
 
-menu.addEventListener('click', function (event) {
-    drawer.classList.toggle('open');
-    event.stopPropagation();
+menu.addEventListener('click', (event) => {
+  drawer.classList.toggle('open');
+  event.stopPropagation();
 });
 
-hero.addEventListener('click', function () {
-    drawer.classList.remove('open');
+hero.addEventListener('click', () => {
+  drawer.classList.remove('open');
 });
 
-main.addEventListener('click', function () {
-    drawer.classList.remove('open');
+main.addEventListener('click', () => {
+  drawer.classList.remove('open');
 });
 
 let restaurantElement = '';
-data.restaurants.forEach(resto => {
-    restaurantElement += `
+data.restaurants.forEach((resto) => {
+  restaurantElement += `
     <article class="post-item">
         <p class="post-item__city">${resto.city}</p>
         <img class="post-item__thumbnail"
@@ -34,8 +35,7 @@ data.restaurants.forEach(resto => {
             <p class="post-item__description">${resto.description.substr(0, 150)} ...</p>
         </div>
     </article>
-    `
+    `;
 });
 
-document.querySelector(".posts").innerHTML = restaurantElement;
-
+document.querySelector('.posts').innerHTML = restaurantElement;
